@@ -70,7 +70,7 @@ img {
   border: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #E62228; }
+  color: #05bdd5; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
@@ -586,6 +586,9 @@ select {
   border: 1px #ACACAC solid;
   height: 50px; }
 
+.primary-btn {
+  margin-left: 10px; }
+
 .padding-minus-left {
   padding-left: 0; }
 
@@ -645,6 +648,7 @@ select {
   position: fixed;
   top: 0;
   right: 0;
+  width: 100%;
   z-index: 999;
   height: 50px;
   background-color: #534f4f; }
@@ -661,12 +665,13 @@ select {
     width: 100%;
     right: 0;
     z-index: 2;
-    text-align: center;
+    text-align: right;
     background-color: #534f4f; }
   .infoBar-wrapper .user-nav {
     position: absolute;
+    top: 0;
     z-index: 1;
-    right: 75px;
+    right: 10%;
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
@@ -697,5 +702,10 @@ select {
 
 .content-wrapper {
   margin-top: 70px; }
+
+.subHeading {
+  padding: 5px 15px;
+  display: inline-block;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=App.css.map */

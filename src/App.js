@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import SafeArea from './components/safeArea'
 import Login from './components/login'
 import './App.css';
@@ -16,7 +17,9 @@ class App extends Component {
     }else{
       return (
           <div className="App">
+            <MuiThemeProvider>
               <SafeArea />
+            </MuiThemeProvider>
           </div>
       );
     }

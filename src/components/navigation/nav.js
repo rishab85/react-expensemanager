@@ -7,7 +7,7 @@ class Nav extends Component{
       <div className="main-nav">
         <ul>
           <NavLink exact to="/" activeClassName="activeList"><li>Home</li></NavLink>
-          <NavLink to="/expense" activeClassName="activeList"><li>Expenses</li></NavLink>
+          <NavLink to="/expense/list" activeClassName="activeList"><li>Expenses</li></NavLink>
           <li>Groups</li>
           <li>Contact</li>
         </ul>

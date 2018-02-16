@@ -21,20 +21,21 @@ handleLogout = () => {
   render(){
     const user = JSON.parse(localStorage.getItem('user'));
     return(
-
-      <div className="infoBar-wrapper">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-9">
-            </div>
-            <div className="col-lg-3">
-              <span id="userName" onClick={this.handleClick}>Welcome : {user.userName}</span>
-            </div>
-            <div className="user-nav" id="userNav">
-              <ul>
-                <li onClick={this.handleLogout}>Logout</li>
-                <li>Profile</li>
-              </ul>
+      <div>
+        <div className="infoBar-wrapper">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-9">
+              </div>
+              <div className="col-lg-3">
+                <span id="userName" onClick={this.handleClick}>Welcome : {user.userName}</span>
+              </div>
+              <div className="user-nav" id="userNav">
+                <ul>
+                  <li onClick={this.handleLogout}>Logout</li>
+                  <li>Profile</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

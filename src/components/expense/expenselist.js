@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom'
 import {getExp} from '../../actions/expenseActions'
+import AddExpense from './addExpense';
 import {connect} from 'react-redux';
 class ExpenseList extends Component{
 
@@ -8,7 +10,7 @@ class ExpenseList extends Component{
   }
 
   render(){
-    console.log(this.props.list)
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"]
     return(
       <div className="expenseWrapper">
         <table className="table table-striped">
@@ -22,18 +24,20 @@ class ExpenseList extends Component{
           </thead>
           <tbody>
             {this.props.list.map((lis)=>{
-              console.log(lis.expenseId)
+              let date = new Date(lis.expenseDate);
+              console.log(lis.expenseDate);
               return(
                 <tr  key={lis.expenseId}>
                   <th scope="row"></th>
                   <td>{lis.expenseName}</td>
-                  <td>{lis.expenseAmount}</td>
-                  <td>{lis.expenseDate}</td>
+                  <td>{`$ ${lis.expenseAmount}`}</td>
+                  <td>{`${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} `}</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+        <Route path="expense/list/add" component={AddExpense} />
       </div>
     );
   }

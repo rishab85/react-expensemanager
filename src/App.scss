@@ -16,7 +16,7 @@
 
 $theme-fontColor : #b8b8b8;
 $theme-lightColor : #e9e9e9;
-
+$theme-blue : #05bdd5;
 *,
 *:before,
 *:after{
@@ -95,7 +95,7 @@ img{
 }
 
 h1,h2,h3,h4,h5,h6{
-	color: $theme-color;
+	color: $theme-blue;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -642,6 +642,10 @@ select{
 		height:50px;
 }
 
+.primary-btn{
+		margin-left: 10px;
+}
+
 .padding-minus-left{
 	padding-left: 0;
 }
@@ -709,7 +713,7 @@ select{
 	position:fixed;
 	top:0;
 	right:0;
-
+	width:100%;
 	z-index:999;
 	height:50px;
 	background-color:#534f4f;
@@ -729,14 +733,15 @@ select{
 		width: 100%;
 		right:0;
 		z-index:2;
-		text-align: center;
+		text-align: right;
 		background-color: #534f4f;
 	}
 
 	.user-nav{
 		position:absolute;
+		top:0;
 		z-index:1;
-		right:75px;
+		right:10%;
 		@include translateY(-100%);
 		width:200px;
 		background-color: #6e6e6e;
@@ -753,6 +758,7 @@ select{
 					cursor: pointer;
 				}
 			}
+
 	}
 
 	.user-nav.active{
@@ -762,6 +768,14 @@ select{
 	}
 }
 
+
+
 .content-wrapper{
 	margin-top:70px;
+}
+
+.subHeading{
+	padding:5px 15px;
+	display: inline-block;
+	margin-bottom: 10px;
 }
